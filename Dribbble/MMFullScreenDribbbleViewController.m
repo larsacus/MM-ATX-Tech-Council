@@ -1,4 +1,4 @@
-//
+
 //  MMFullScreenDribbbleViewController.m
 //  Dribbble
 //
@@ -88,7 +88,7 @@ static const CGFloat kAvatarStartingX = 1058.0f;
     if ((self = [self initWithNibName:@"MMFullScreenDribbbleViewController" bundle:nil])) {
         _dribbbleUserName = dribbbleUserName;
         _reboundShotID = reboundShotID;
-        _twitterSearchString = twitterSearchString;
+        _twitterSearchString = [twitterSearchString copy];
     }
     
     return self;
@@ -151,15 +151,15 @@ static const CGFloat kAvatarStartingX = 1058.0f;
                                                  userInfo:nil
                                                   repeats:YES];
     
-    self.shotCycleManager = [[MMShotCycleManager alloc] init];
-    self.shotCycleManager.delegate = self;
+//    self.shotCycleManager = [[MMShotCycleManager alloc] init];
+//    self.shotCycleManager.delegate = self;
+//    
+//    [self.shotCycleManager beginShotCycleWithCycleInterval:10 refreshInterval:20 followingUsername:self.dribbbleUserName numberOfOnDeckPlayers:kOnDeckPlayers + 1];
+//    
+//    self.reboundCycleManager = [[MMReboundCycleManager alloc] init];
+//    self.reboundCycleManager.delegate = self;
     
-    [self.shotCycleManager beginShotCycleWithCycleInterval:10 refreshInterval:20 followingUsername:self.dribbbleUserName numberOfOnDeckPlayers:kOnDeckPlayers + 1];
-    
-    self.reboundCycleManager = [[MMReboundCycleManager alloc] init];
-    self.reboundCycleManager.delegate = self;
-    
-    [self.reboundCycleManager beginReboundCycleWithCycleInterval:10 refreshInterval:20 shotIdentifier:self.reboundShotID];
+//    [self.reboundCycleManager beginReboundCycleWithCycleInterval:10 refreshInterval:20 shotIdentifier:self.reboundShotID];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -234,6 +234,13 @@ static const CGFloat kAvatarStartingX = 1058.0f;
     
     [_tweetTableView insertRowsAtIndexPaths:indexPaths
                            withRowAnimation:UITableViewRowAnimationTop];
+}
+
+- (void)setTwitterSearchString:(NSString *)twitterSearchString{
+    _twitterSearchString = [twitterSearchString copy];
+    
+    NSLog(@"setting twitter search string to: %@", _twitterSearchString);
+    
 }
 
 - (void)updateAvatarImageViewPositionsExceptOnDeckImageView {

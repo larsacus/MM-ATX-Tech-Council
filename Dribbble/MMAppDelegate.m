@@ -36,7 +36,7 @@
     [self.window makeKeyAndVisible];
     
     if([[UIScreen screens] count] >1){
-        UIScreen *externalScreen = [[UIScreen screens] objectAtIndex:1];
+        UIScreen *externalScreen = [[UIScreen screens] lastObject];
         
         [self connectToScreen:externalScreen];
     }
@@ -97,21 +97,27 @@
 - (void)connectToScreen:(UIScreen*)screen{
     if([screen isEqual:[UIScreen mainScreen]] == NO){
         
-        CGSize max;
-        UIScreenMode* maxScreenMode;
+//        CGSize max;
+        UIScreenMode* maxScreenMode = [[[UIScreen screens] lastObject] preferredMode];
         
-        for(int i = 0; i < [[[[UIScreen screens] objectAtIndex:1] availableModes]count]; i++)
-        {
-            UIScreenMode* current = [[[[UIScreen screens] objectAtIndex:1] availableModes] objectAtIndex:i];
-            if(current.size.width > max.width)
-            {
-                max = current.size;
-                maxScreenMode = current;
-            }
+        for (UIScreenMode *mode in [[[UIScreen screens] lastObject] availableModes]) {
+            NSLog(@"Screen mode: %@", mode);
         }
+        
+//        for(int i = 0; i < [[[[UIScreen screens] objectAtIndex:1] availableModes]count]; i++)
+//        {
+//            UIScreenMode* current = [[[[UIScreen screens] objectAtIndex:1] availableModes] objectAtIndex:i];
+//            if(current.size.width > max.width)
+//            {
+//                max = current.size;
+//                maxScreenMode = current;
+//            }
+//        }
         
         screen.overscanCompensation = UIScreenOverscanCompensationInsetApplicationFrame;
         screen.currentMode = maxScreenMode;
+        
+        NSLog(@"Screen: %@", screen);
         
         if(!_fullScreenWindow){
             CGRect windowFrame = CGRectMake(0,0, screen.bounds.size.width, screen.bounds.size.height);
@@ -121,7 +127,7 @@
         
         // Override point for customizing the dribbble username for the user following event attendees, rebound shot id, and the twitter search string.
         if(!_fullScreenViewController){
-            _fullScreenViewController = [[MMFullScreenDribbbleViewController alloc] initWithDribbbleUserName:@"seand" reboundShotID:@"464661" twitterSearchString:@"mmdribbble"];
+            _fullScreenViewController = [[MMFullScreenDribbbleViewController alloc] initWithDribbbleUserName:nil reboundShotID:nil twitterSearchString:@"dearmarissamayer"];
         }
         
         [_fullScreenWindow setRootViewController:_fullScreenViewController];

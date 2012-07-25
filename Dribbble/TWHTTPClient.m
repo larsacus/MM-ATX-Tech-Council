@@ -37,4 +37,12 @@
     return self;
 }
 
+//- (void)getPath:(NSString *)path parameters:(NSDictionary *)parameters success:(void (^)(AFHTTPRequestOperation *, id))success failure:(void (^)(AFHTTPRequestOperation *, NSError *))failure{
+//    NSLog(@"path: %@", path);
+//    
+//    [super getPath:path parameters:parameters success:success failure:^(AFHTTPRequestOperation *operation, NSError *error){
+//        
+//    }];
+//}
+
 @end

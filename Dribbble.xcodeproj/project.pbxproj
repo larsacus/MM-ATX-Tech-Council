@@ -57,6 +57,7 @@
 		29C477D01508450100ECB033 /* icon_dribbble.png in Resources */ = {isa = PBXBuildFile; fileRef = 29C477C41508450100ECB033 /* icon_dribbble.png */; };
 		29C477D11508450100ECB033 /* icon_location.png in Resources */ = {isa = PBXBuildFile; fileRef = 29C477C51508450100ECB033 /* icon_location.png */; };
 		29C477E4150854BC00ECB033 /* MMTweetCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 29C477E3150854BC00ECB033 /* MMTweetCell.m */; };
+		46E6B01415BFAE3D003EFAC3 /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46E6B01315BFAE3D003EFAC3 /* Twitter.framework */; };
 		559305371520C81500C56482 /* ContainerAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 559305361520C81500C56482 /* ContainerAdditions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		559445ED1509923E0038468E /* UIView+Animations.m in Sources */ = {isa = PBXBuildFile; fileRef = 559445EC1509923E0038468E /* UIView+Animations.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		559445F1150997C00038468E /* MMReboundCycleManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 559445F0150997BF0038468E /* MMReboundCycleManager.m */; };
@@ -144,6 +145,7 @@
 		29C477C51508450100ECB033 /* icon_location.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_location.png; sourceTree = "<group>"; };
 		29C477E2150854BC00ECB033 /* MMTweetCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMTweetCell.h; sourceTree = "<group>"; };
 		29C477E3150854BC00ECB033 /* MMTweetCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMTweetCell.m; sourceTree = "<group>"; };
+		46E6B01315BFAE3D003EFAC3 /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
 		559305351520C81500C56482 /* ContainerAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContainerAdditions.h; sourceTree = "<group>"; };
 		559305361520C81500C56482 /* ContainerAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContainerAdditions.m; sourceTree = "<group>"; };
 		559445EB1509923E0038468E /* UIView+Animations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Animations.h"; sourceTree = "<group>"; };
@@ -158,6 +160,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46E6B01415BFAE3D003EFAC3 /* Twitter.framework in Frameworks */,
 				2982F63E1508643E008797E7 /* QuartzCore.framework in Frameworks */,
 				2982F63C15086247008797E7 /* CoreText.framework in Frameworks */,
 				26B5A4261506FD2D000CE407 /* CoreData.framework in Frameworks */,
@@ -173,6 +176,7 @@
 		266338D71506F99D00EE2C25 = {
 			isa = PBXGroup;
 			children = (
+				46E6B01315BFAE3D003EFAC3 /* Twitter.framework */,
 				297951C61521FE8E0054D67F /* Vender */,
 				266338EC1506F99D00EE2C25 /* Dribbble */,
 				266338E51506F99D00EE2C25 /* Frameworks */,
@@ -591,6 +595,7 @@
 		266339011506F99D00EE2C25 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Lars Anderson (47WYENZZ4N)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
@@ -603,6 +608,7 @@
 					"-all-load",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "CD6138C3-01EA-47B0-BFB4-A64AA984AC7D";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
