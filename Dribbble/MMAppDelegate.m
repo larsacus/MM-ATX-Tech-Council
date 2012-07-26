@@ -127,7 +127,7 @@
         
         // Override point for customizing the dribbble username for the user following event attendees, rebound shot id, and the twitter search string.
         if(!_fullScreenViewController){
-            _fullScreenViewController = [[MMFullScreenDribbbleViewController alloc] initWithDribbbleUserName:nil reboundShotID:nil twitterSearchString:@"dearmarissamayer"];
+            _fullScreenViewController = [[MMFullScreenDribbbleViewController alloc] initWithDribbbleUserName:nil reboundShotID:nil twitterSearchString:@"atxgrow"];
         }
         
         [_fullScreenWindow setRootViewController:_fullScreenViewController];

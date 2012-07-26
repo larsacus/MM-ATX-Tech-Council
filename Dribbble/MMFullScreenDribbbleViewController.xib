@@ -42,7 +42,7 @@
 						<string key="NSFrameSize">{1920, 1080}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="440934591"/>
+						<reference key="NSNextKeyView" ref="277177477"/>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<object class="NSCustomResource" key="IBUIImage">
@@ -53,11 +53,10 @@
 					<object class="IBUITableView" id="122962610">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">275</int>
-						<string key="NSFrame">{{497, 0}, {660, 772}}</string>
+						<string key="NSFrame">{{1108, 134}, {768, 886}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="884988561"/>
-						<object class="NSColor" key="IBUIBackgroundColor" id="1040270876">
+						<object class="NSColor" key="IBUIBackgroundColor">
 							<int key="NSColorSpace">3</int>
 							<bytes key="NSWhite">MCAwAA</bytes>
 						</object>
@@ -70,96 +69,20 @@
 						<float key="IBUISectionHeaderHeight">22</float>
 						<float key="IBUISectionFooterHeight">22</float>
 					</object>
-					<object class="IBUIImageView" id="440934591">
-						<reference key="NSNextResponder" ref="191373211"/>
-						<int key="NSvFlags">307</int>
-						<string key="NSFrame">{{1261, 0}, {659, 155}}</string>
-						<reference key="NSSuperview" ref="191373211"/>
-						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="811654678"/>
-						<bool key="IBUIUserInteractionEnabled">NO</bool>
-						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-						<object class="NSCustomResource" key="IBUIImage">
-							<string key="NSClassName">NSImage</string>
-							<string key="NSResourceName">ball-bar.png</string>
-						</object>
-					</object>
-					<object class="IBUIImageView" id="884988561">
-						<reference key="NSNextResponder" ref="191373211"/>
-						<int key="NSvFlags">283</int>
-						<string key="NSFrame">{{1261, 925}, {659, 155}}</string>
-						<reference key="NSSuperview" ref="191373211"/>
-						<reference key="NSWindow"/>
-						<bool key="IBUIUserInteractionEnabled">NO</bool>
-						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-						<object class="NSCustomResource" key="IBUIImage">
-							<string key="NSClassName">NSImage</string>
-							<string key="NSResourceName">footer.png</string>
-						</object>
-					</object>
-					<object class="IBUIView" id="572132323">
+					<object class="IBUIImageView" id="277177477">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
-						<array class="NSMutableArray" key="NSSubviews">
-							<object class="IBUIImageView" id="210384740">
-								<reference key="NSNextResponder" ref="572132323"/>
-								<int key="NSvFlags">292</int>
-								<string key="NSFrame">{{2, 2}, {341, 233}}</string>
-								<reference key="NSSuperview" ref="572132323"/>
-								<reference key="NSWindow"/>
-								<reference key="NSNextKeyView" ref="26097884"/>
-								<string key="NSReuseIdentifierKey">_NS:9</string>
-								<bool key="IBUIUserInteractionEnabled">NO</bool>
-								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-							</object>
-							<object class="IBUIImageView" id="26097884">
-								<reference key="NSNextResponder" ref="572132323"/>
-								<int key="NSvFlags">292</int>
-								<string key="NSFrame">{{2, 2}, {341, 233}}</string>
-								<reference key="NSSuperview" ref="572132323"/>
-								<reference key="NSWindow"/>
-								<reference key="NSNextKeyView" ref="532852385"/>
-								<string key="NSReuseIdentifierKey">_NS:9</string>
-								<bool key="IBUIUserInteractionEnabled">NO</bool>
-								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-							</object>
-							<object class="IBUIImageView" id="532852385">
-								<reference key="NSNextResponder" ref="572132323"/>
-								<int key="NSvFlags">292</int>
-								<string key="NSFrameSize">{71, 72}</string>
-								<reference key="NSSuperview" ref="572132323"/>
-								<reference key="NSWindow"/>
-								<reference key="NSNextKeyView" ref="122962610"/>
-								<string key="NSReuseIdentifierKey">_NS:9</string>
-								<bool key="IBUIUserInteractionEnabled">NO</bool>
-								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-								<object class="NSCustomResource" key="IBUIImage">
-									<string key="NSClassName">NSImage</string>
-									<string key="NSResourceName">new.png</string>
-								</object>
-							</object>
-						</array>
-						<string key="NSFrame">{{135, 776}, {343, 235}}</string>
+						<string key="NSFrame">{{1457, 45}, {71, 58}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="210384740"/>
+						<reference key="NSNextKeyView" ref="122962610"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
-						<reference key="IBUIBackgroundColor" ref="1040270876"/>
-						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-					</object>
-					<object class="IBUIImageView" id="811654678">
-						<reference key="NSNextResponder" ref="191373211"/>
-						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{1292, 28}, {100, 100}}</string>
-						<reference key="NSSuperview" ref="191373211"/>
-						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="572132323"/>
-						<string key="NSReuseIdentifierKey">_NS:9</string>
+						<int key="IBUIContentMode">4</int>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<object class="NSCustomResource" key="IBUIImage">
 							<string key="NSClassName">NSImage</string>
-							<string key="NSResourceName">ball.png</string>
+							<string key="NSResourceName">twitter_off.png</string>
 						</object>
 					</object>
 				</array>
@@ -197,43 +120,11 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
-						<string key="label">currentRebound</string>
+						<string key="label">twitterImageView</string>
 						<reference key="source" ref="372490531"/>
-						<reference key="destination" ref="210384740"/>
+						<reference key="destination" ref="277177477"/>
 					</object>
-					<int key="connectionID">15</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBCocoaTouchOutletConnection" key="connection">
-						<string key="label">nextRebound</string>
-						<reference key="source" ref="372490531"/>
-						<reference key="destination" ref="26097884"/>
-					</object>
-					<int key="connectionID">16</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBCocoaTouchOutletConnection" key="connection">
-						<string key="label">currentTagImageView</string>
-						<reference key="source" ref="372490531"/>
-						<reference key="destination" ref="532852385"/>
-					</object>
-					<int key="connectionID">18</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBCocoaTouchOutletConnection" key="connection">
-						<string key="label">reboundContainerView</string>
-						<reference key="source" ref="372490531"/>
-						<reference key="destination" ref="572132323"/>
-					</object>
-					<int key="connectionID">20</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBCocoaTouchOutletConnection" key="connection">
-						<string key="label">dribbbleBall</string>
-						<reference key="source" ref="372490531"/>
-						<reference key="destination" ref="811654678"/>
-					</object>
-					<int key="connectionID">22</int>
+					<int key="connectionID">24</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
@@ -264,12 +155,9 @@
 						<int key="objectID">1</int>
 						<reference key="object" ref="191373211"/>
 						<array class="NSMutableArray" key="children">
-							<reference ref="440934591"/>
-							<reference ref="884988561"/>
 							<reference ref="294624330"/>
-							<reference ref="572132323"/>
-							<reference ref="811654678"/>
 							<reference ref="122962610"/>
+							<reference ref="277177477"/>
 						</array>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -291,51 +179,14 @@
 						<string key="objectName">Background View</string>
 					</object>
 					<object class="IBObjectRecord">
-						<int key="objectID">5</int>
-						<reference key="object" ref="440934591"/>
-						<reference key="parent" ref="191373211"/>
-						<string key="objectName">Twitter Header View</string>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">6</int>
-						<reference key="object" ref="884988561"/>
-						<reference key="parent" ref="191373211"/>
-						<string key="objectName">Twitter Footer View</string>
-					</object>
-					<object class="IBObjectRecord">
 						<int key="objectID">7</int>
 						<reference key="object" ref="122962610"/>
 						<reference key="parent" ref="191373211"/>
 						<string key="objectName">Twitter Table View</string>
 					</object>
 					<object class="IBObjectRecord">
-						<int key="objectID">19</int>
-						<reference key="object" ref="572132323"/>
-						<array class="NSMutableArray" key="children">
-							<reference ref="210384740"/>
-							<reference ref="26097884"/>
-							<reference ref="532852385"/>
-						</array>
-						<reference key="parent" ref="191373211"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">14</int>
-						<reference key="object" ref="210384740"/>
-						<reference key="parent" ref="572132323"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">13</int>
-						<reference key="object" ref="26097884"/>
-						<reference key="parent" ref="572132323"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">17</int>
-						<reference key="object" ref="532852385"/>
-						<reference key="parent" ref="572132323"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">21</int>
-						<reference key="object" ref="811654678"/>
+						<int key="objectID">23</int>
+						<reference key="object" ref="277177477"/>
 						<reference key="parent" ref="191373211"/>
 					</object>
 				</array>
@@ -346,21 +197,15 @@
 				<string key="-2.CustomClassName">UIResponder</string>
 				<string key="-2.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="1.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
-				<string key="13.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
-				<string key="14.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
-				<string key="17.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
-				<string key="19.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
-				<string key="21.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+				<string key="23.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="4.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
-				<string key="5.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
-				<string key="6.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="7.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 			</dictionary>
 			<dictionary class="NSMutableDictionary" key="unlocalizedProperties"/>
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">22</int>
+			<int key="maxID">24</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -368,37 +213,17 @@
 					<string key="className">MMFullScreenDribbbleViewController</string>
 					<string key="superclassName">UIViewController</string>
 					<dictionary class="NSMutableDictionary" key="outlets">
-						<string key="currentRebound">UIImageView</string>
-						<string key="currentTagImageView">UIImageView</string>
-						<string key="dribbbleBall">UIImageView</string>
-						<string key="nextRebound">UIImageView</string>
-						<string key="reboundContainerView">UIView</string>
 						<string key="tweetTableView">UITableView</string>
+						<string key="twitterImageView">UIImageView</string>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
-						<object class="IBToOneOutletInfo" key="currentRebound">
-							<string key="name">currentRebound</string>
-							<string key="candidateClassName">UIImageView</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="currentTagImageView">
-							<string key="name">currentTagImageView</string>
-							<string key="candidateClassName">UIImageView</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="dribbbleBall">
-							<string key="name">dribbbleBall</string>
-							<string key="candidateClassName">UIImageView</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="nextRebound">
-							<string key="name">nextRebound</string>
-							<string key="candidateClassName">UIImageView</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="reboundContainerView">
-							<string key="name">reboundContainerView</string>
-							<string key="candidateClassName">UIView</string>
-						</object>
 						<object class="IBToOneOutletInfo" key="tweetTableView">
 							<string key="name">tweetTableView</string>
 							<string key="candidateClassName">UITableView</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="twitterImageView">
+							<string key="name">twitterImageView</string>
+							<string key="candidateClassName">UIImageView</string>
 						</object>
 					</dictionary>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
@@ -418,10 +243,7 @@
 		<int key="IBDocument.defaultPropertyAccessControl">3</int>
 		<dictionary class="NSMutableDictionary" key="IBDocument.LastKnownImageSizes">
 			<string key="background.png">{1920, 1080}</string>
-			<string key="ball-bar.png">{659, 155}</string>
-			<string key="ball.png">{100, 100}</string>
-			<string key="footer.png">{659, 155}</string>
-			<string key="new.png">{71, 72}</string>
+			<string key="twitter_off.png">{71, 58}</string>
 		</dictionary>
 		<string key="IBCocoaTouchPluginVersion">1498</string>
 	</data>

@@ -31,14 +31,8 @@
                  reboundShotID:(NSString*)reboundShotID 
            twitterSearchString:(NSString*)twitterSearchString;
 
-@property (weak, nonatomic) IBOutlet UITableView *tweetTableView;
+@property (strong, nonatomic) IBOutlet UITableView *tweetTableView;
 
-@property (weak, nonatomic) IBOutlet UIView *reboundContainerView;
-@property (weak, nonatomic) IBOutlet UIImageView *dribbbleBall;
-
-@property (strong, nonatomic) IBOutlet UIImageView *currentRebound;
-@property (strong, nonatomic) IBOutlet UIImageView *nextRebound;
-
-@property (weak, nonatomic) IBOutlet UIImageView *currentTagImageView;
+@property (strong, nonatomic) IBOutlet UIImageView *twitterImageView;
 
 @end

@@ -24,8 +24,6 @@
 
 #import <UIKit/UIKit.h>
 
-#import "MMShotView.h"
-
 @interface MMViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 

@@ -23,7 +23,6 @@
 // THE SOFTWARE.
 
 #import "TWTweet.h"
-#import "TWHTTPClient.h"
 #import <Twitter/Twitter.h>
 
 @implementation TWTweet
@@ -79,12 +78,14 @@
                 } else {
                     tweet = [[TWTweet alloc] initWithEntity:[NSEntityDescription entityForName:[self nameForEntityDescription] inManagedObjectContext:context] insertIntoManagedObjectContext:context];
                 }
-
+                
                 [tweet setPrimitiveValue:[dict valueForKey:@"text"] forKey:@"text"];
                 [tweet setPrimitiveValue:[dict valueForKey:@"id"] forKey:@"id"];
                 [tweet setPrimitiveValue:[dict valueForKey:@"from_user"] forKey:@"from_user"];
                 [tweet setPrimitiveValue:[dict valueForKey:@"from_user_name"] forKey:@"from_user_name"];
-
+                [tweet setPrimitiveValue:[dict valueForKey:@"id_str"] forKey:@"id_str"];
+                [tweet setPrimitiveValue:[dict valueForKey:@"profile_image_url"] forKey:@"profile_image_url"];
+                
                 [tweets addObject:tweet];
             }
             
@@ -92,51 +93,18 @@
             
             [context save:&saveError];
             
-            resultBlock(tweets);
+            dispatch_async(dispatch_get_main_queue(), ^{
+                resultBlock(tweets);
+            });
         }
         else{
             NSLog(@"Twitter error, HTTP response: %i", [urlResponse statusCode]);
-            failureBlock(error);
+            
+            dispatch_async(dispatch_get_main_queue(), ^{
+                failureBlock(error);
+            });
         }
     }];
-    
-//    
-//    [[TWHTTPClient sharedClient] getPath:URN parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
-//        NSArray *array = [responseObject valueForKey:[self keyPathForResponseObject]];
-//        NSMutableArray *tweets = [NSMutableArray array];
-//        
-//        for (NSDictionary *dict in array) {
-//            TWTweet *tweet;
-//            
-//            NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:[self nameForEntityDescription]];
-//            fetchRequest.predicate = [NSPredicate predicateWithFormat:@"SELF.id == %@", [dict valueForKey:@"id"]];
-//            [fetchRequest setSortDescriptors:[NSArray array]];
-//            
-//            NSError *fetchError = nil;
-//            NSArray *fetchTweets = [context executeFetchRequest:fetchRequest error:&fetchError];
-//            
-//            if (fetchError == nil && [fetchTweets count] > 0) {
-//                tweet = [fetchTweets objectAtIndex:0];
-//            } else {
-//                tweet = [[TWTweet alloc] initWithEntity:[NSEntityDescription entityForName:[self nameForEntityDescription] inManagedObjectContext:context] insertIntoManagedObjectContext:context];
-//            }
-//
-//            [tweet setPrimitiveValue:[dict valueForKey:@"text"] forKey:@"text"];
-//            
-////            if (tweet.username) {
-//                [tweets addObject:tweet];
-////            }
-//            
-//        }
-//        
-//        NSError *saveError = nil;
-//        
-//        [context save:&saveError];
-//        
-//        resultBlock(tweets);
-//    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-//        failureBlock(error);
-//    }];
 }
 
 #pragma mark - custom properties

@@ -96,10 +96,10 @@ static MMDataManager* MM_sharedDataManager;
 + (MMDataManager*)sharedDataManager {
 	if (MM_sharedDataManager == nil) {
 		MM_sharedDataManager = [[MMDataManager alloc] init];
-#ifdef DEBUG
-        [[AFHTTPRequestOperationLogger sharedLogger] startLogging];
-        [[AFHTTPRequestOperationLogger sharedLogger] setLevel:AFLoggerLevelInfo];
-#endif
+//#ifdef DEBUG
+//        [[AFHTTPRequestOperationLogger sharedLogger] startLogging];
+//        [[AFHTTPRequestOperationLogger sharedLogger] setLevel:AFLoggerLevelInfo];
+//#endif
 	}
 	
 	return MM_sharedDataManager;

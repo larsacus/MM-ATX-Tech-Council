@@ -29,7 +29,7 @@
 #import <QuartzCore/QuartzCore.h>
 
 #define CONTENT_INSET 15.0
-#define IMAGE_VIEW_HEIGHT 48.0
+#define IMAGE_VIEW_HEIGHT 80.0
 #define IMAGE_VIEW_OFFSET 8.0
 
 @interface MMTweetCell ()
@@ -63,7 +63,7 @@
         [_tweetLabel setBackgroundColor:[UIColor clearColor]];
         
         _userImageView = [[UIImageView alloc] initWithFrame:CGRectZero];
-        _userImageView.layer.cornerRadius = 5.0f;
+        _userImageView.layer.cornerRadius = 11.0f;
         _userImageView.layer.masksToBounds = YES;
         [self addSubview:_userImageView];
     }
@@ -116,24 +116,35 @@
     NSRange boldRange = NSMakeRange(0, tweet.username.length+2);
     
     
+//    for (NSString *familyName in [UIFont familyNames])
+//    {
+//        NSLog(@"----------------");
+//        NSLog(@"FAMILY: %@", familyName);
+//        for(NSString *fontName in [UIFont fontNamesForFamilyName:familyName])
+//        {
+//            NSLog(@"  %@", fontName);
+//        }
+//    }
+    
     // Core Text APIs use C functions without a direct bridge to UIFont. See Apple's "Core Text Programming Guide" to learn how to configure string attributes.
-    UIFont *boldSystemFont = [UIFont boldSystemFontOfSize:25]; 
+    UIFont *boldSystemFont = [UIFont fontWithName:@"HelveticaNeue-Bold" size:24];
     CTFontRef boldFont = CTFontCreateWithName((__bridge CFStringRef)boldSystemFont.fontName, boldSystemFont.pointSize, NULL);
     if (boldFont) {
-        UIColor * textColor = [UIColor colorWithRed:197.0/255.0
-                                              green:55.0/255.0
-                                               blue:109.0/255.0
-                                              alpha:1.0];
+        UIColor * textColor = [UIColor colorWithRed:0.00 green:0.69 blue:0.85 alpha:1.0];
         [mutableAttributedString addAttribute:(NSString *) kCTForegroundColorAttributeName value:(id)[textColor CGColor] range:boldRange];
         [mutableAttributedString addAttribute:(NSString *)kCTFontAttributeName value:(__bridge id)boldFont range:boldRange];
+//        [mutableAttributedString addAttribute:(NSString *)kCT value:<#(id)#> range:<#(NSRange)#>]
+#warning add text shadow here
         CFRelease(boldFont);
     }
 
     NSRange regularRange = NSMakeRange(boldRange.length, tweetText.length-boldRange.length);
 
-    UIFont *systemFont = [UIFont systemFontOfSize:25]; 
+    UIFont *systemFont = [UIFont fontWithName:@"HelveticaNeue" size:24];
     CTFontRef font = CTFontCreateWithName((__bridge CFStringRef)systemFont.fontName, systemFont.pointSize, NULL);
     if (font) {
+        UIColor * textColor = [UIColor colorWithRed:0.35 green:0.35 blue:0.35 alpha:1.0];
+        [mutableAttributedString addAttribute:(NSString *) kCTForegroundColorAttributeName value:(id)[textColor CGColor] range:regularRange];
         [mutableAttributedString addAttribute:(NSString *)kCTFontAttributeName value:(__bridge id)font range:regularRange];
         CFRelease(font);
     }
@@ -143,10 +154,7 @@
          NSRange hashtagRange = [string rangeOfString:@"#"];
          if(hashtagRange.location == 0){
              NSRange stringRange = [tweetText rangeOfString:string];
-             UIColor * textColor = [UIColor colorWithRed:68.0/255.0
-                                                   green:68.0/255.0
-                                                    blue:68.0/255.0
-                                                   alpha:1.0];
+             UIColor * textColor = [UIColor colorWithRed:0.00 green:0.68 blue:0.83 alpha:1.0];
              [mutableAttributedString addAttribute:(NSString *) kCTForegroundColorAttributeName value:(id)[textColor CGColor] range:stringRange];
          }
      }];

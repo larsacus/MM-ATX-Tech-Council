@@ -25,7 +25,6 @@
 #import "MMViewController.h"
 
 #import "MMDataManager.h"
-#import "DBShot.h"
 #import "TWTweet.h"
 
 @interface MMViewController ()
