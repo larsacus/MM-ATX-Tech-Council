@@ -97,22 +97,22 @@
 - (void)connectToScreen:(UIScreen*)screen{
     if([screen isEqual:[UIScreen mainScreen]] == NO){
         
-//        CGSize max;
+        CGSize max;
         UIScreenMode* maxScreenMode = [[[UIScreen screens] lastObject] preferredMode];
         
-        for (UIScreenMode *mode in [[[UIScreen screens] lastObject] availableModes]) {
-            NSLog(@"Screen mode: %@", mode);
-        }
-        
-//        for(int i = 0; i < [[[[UIScreen screens] objectAtIndex:1] availableModes]count]; i++)
-//        {
-//            UIScreenMode* current = [[[[UIScreen screens] objectAtIndex:1] availableModes] objectAtIndex:i];
-//            if(current.size.width > max.width)
-//            {
-//                max = current.size;
-//                maxScreenMode = current;
-//            }
+//        for (UIScreenMode *mode in [[[UIScreen screens] lastObject] availableModes]) {
+//            NSLog(@"Screen mode: %@", mode);
 //        }
+        
+        for(int i = 0; i < [[[[UIScreen screens] objectAtIndex:1] availableModes]count]; i++)
+        {
+            UIScreenMode* current = [[[[UIScreen screens] objectAtIndex:1] availableModes] objectAtIndex:i];
+            if(current.size.width > max.width)
+            {
+                max = current.size;
+                maxScreenMode = current;
+            }
+        }
         
         screen.overscanCompensation = UIScreenOverscanCompensationInsetApplicationFrame;
         screen.currentMode = maxScreenMode;
